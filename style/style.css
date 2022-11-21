@@ -1,0 +1,496 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+    font-family: 'flow';
+    src: url('../fonts/flow/flow-webfont.eot');
+    src: url('../fonts/flow/flow-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/flow/flow-webfont.woff2') format('woff2'),
+         url('../fonts/flow/flow-webfont.woff') format('woff'),
+         url('../fonts/flow/flow-webfont.ttf') format('truetype'),
+         url('../fonts/flow/flow-webfont.svg#flowregular') format('svg');
+		 font-weight: normal;
+		 font-style: normal;
+}
+@font-face{
+	font-family: 'prothin';
+	src: url('../fonts/pf-thin/pfdintextcomppro-thin-webfont.eot');
+	src: url('../fonts/pf-thin/pfdintextcomppro-thin-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/pf-thin/pfdintextcomppro-thin-webfont.woff2') format('woff2'),
+		url('../fonts/pf-thin/pfdintextcomppro-thin-webfont.woff') format('woff'),
+		url('../fonts/pf-thin/pfdintextcomppro-thin-webfont.ttf') format('truetype'),
+		url('vpfdintextcomppro-thin-webfont.svg#pf_din_text_comp_prothin') format('svg');
+			font-weight: normal;
+			font-style: normal;
+}
+@font-face{
+	font-family: 'pf_din_text_comp_pro';
+	src: url('../fonts/comppro/pfdintextcomppro-regular-webfont.eot');
+    src: url('../fonts/comppro/pfdintextcomppro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/comppro/pfdintextcomppro-regular-webfont.woff2') format('woff2'),
+		url('../fonts/comppro/pfdintextcomppro-regular-webfont.woff') format('woff'),
+		url('../fonts/comppro/pfdintextcomppro-regular-webfont.ttf') format('truetype'),
+		url('../fonts/comppro/pfdintextcomppro-regular-webfont.svg#pf_din_text_comp_proregular') format('svg');
+			font-weight: normal;
+			font-style: normal;	
+}
+@font-face{
+	font-family: 'arial_mt';
+    src: url('../fonts/arialmt/arial_mt_black-webfont.eot');
+    src: url('../fonts/arialmt/arial_mt_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/arialmt/arial_mt_black-webfont.woff2') format('woff2'),
+         url('../fonts/arialmt/arial_mt_black-webfont.woff') format('woff'),
+         url('../fonts/arialmt/arial_mt_black-webfont.ttf') format('truetype'),
+         url('../fonts/arialmt/arial_mt_black-webfont.svg#arial_mt_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;		
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.box{
+	font-size: 0;
+	text-align: center;
+	color: #959595;
+	font-family: prothin;
+	overflow-x: hidden;
+}
+.first-box{
+	position: relative;
+	font-weight: 400;
+	width: 980px;
+	margin: 0 auto;
+}
+.first-box>div{
+	display: inline-block;
+	font-size: 18px;
+	vertical-align: top;
+	width: 490px;
+}
+.first-box p{
+	margin: 10px 0 0 25px;
+	text-align: left;
+}
+.first-box p::before{
+	content: "";
+	width: 33px;
+	height: 27px;
+	background: url(../images/css_sprites.png) -338px -114px;
+	display: inline-block;
+	
+}
+.first-box p+p:before{
+	content: "";
+	width: 33px;
+	height: 14px;
+	background: url(../images/css_sprites.png) -257px -226px;
+	display: inline-block;
+}	
+.first-box .logo{
+	position: absolute;
+	top:0;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 160px;
+	height: 180px;
+	border-radius: 50%;
+	background: white;
+	z-index: 5;
+}
+.logo img{
+	margin: 15px 0;
+}
+.first-box>div+div+div{
+	font-size: 0;
+}
+a{
+    text-decoration: none;
+}
+.first-box form{
+	display: inline-block;
+	font-size: 18px;
+	width: 390px;
+
+}
+.language{
+	display: inline-block;
+	font-size: 0;
+}
+.language li{
+	display: inline-block;
+	width: 32px;
+	height: 57px;
+	text-align: center;
+}
+.language li a{
+	color: #959595;
+	font-size: 14px;
+	font-weight: 500;
+}
+.language .active  {
+	width: 32px;
+	height: 57px;
+	background: url(../images/css_sprites.png) -10px -226px;
+}
+.language .active a {
+	color: white;
+}
+.first-box input{
+	width: 195px;
+	height: 20px;
+	border: none;
+	border-bottom: 2px solid #65baaf;
+	margin: 20px 0 0 130px;
+}
+.first-box input::placeholder{
+	font-family: prothin;
+	font-size: 18px;
+    font-weight: 400;
+}
+.first-box button{
+	height: 33px;
+	width: 34px;
+	position: relative;
+	border: none;
+	background: white;
+
+}
+.first-box button::before{
+	content: "";
+	position: absolute;
+	top:0%;
+	left:0%;
+	width: 34px;
+	height: 33px;
+	background: url(../images/css_sprites.png) -205px -86px;
+	display: visible;
+}
+.language li a{
+    padding: 25px 10px;
+	display: block;
+}
+.headmenu li{
+	display: inline-block;
+}
+.headmenu li a{
+	color: black;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 25px 15px;
+	display: block;
+}
+.headmenu>li:nth-child(5){
+	margin: 0 0 0 180px;
+}
+.second-box{
+	position: relative;
+	color: white;
+	font-weight: 400;
+	text-align: center;
+}
+.slider{
+	display: inline-block;
+}
+.slider::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.slider p{
+    font-size: 20px;
+    line-height: 40px;
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.slider p+p{
+	font-family: pf_din_text_comp_pro;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 40px;
+	position: absolute;
+	top: 168px;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.slider p+p+p{
+	font-family: flow;
+    font-size: 32px;
+    line-height: 40px;
+	position: absolute;
+	top: 280px;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.slider ul{
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+}
+.slider li{
+	display: inline-block;
+	margin: 40px 10px;
+	width: 25px;
+	height: 25px;
+	background: url(../images/css_sprites.png) -114px -226px;
+	border: 6px solid transparent;
+}
+.slider .active{
+	background: url(../images/css_sprites.png) -148px -86px; 
+	width: 37px;
+	height: 37px;
+	border: none;
+}
+.third-box{
+	height: 375px;
+	border-bottom: 2px solid #959595; 
+	position: relative;
+}
+.third-box::before{
+	content: "";
+	position: absolute;
+	top:60px;
+	left:50%;
+	transform: translate(-200%,0);
+	background: url(../images/bicycle.png);
+	width: 311px;
+	height: 346px;
+}
+.third-box::after{
+	content: "";
+	position: absolute;
+	top:20px;
+	right:50%;
+	transform: translate(250%,0);
+	background: url(../images/Векторний_смарт-об’єкт.png);
+	width: 204px;
+	height: 323px;
+}
+.third-box p{
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+	width: 400px;
+	height: 73px;
+	margin: 25px auto;
+}
+.third-box h1{
+    font-family: flow;
+	color: #65baaf;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+	width: 200px;
+	height: 100px;
+	margin: 40px auto;
+	position: relative;
+}
+.third-box h1::before{
+	content: "";
+	width: 449px;
+	height: 104px;
+	position: absolute;
+	top:0;
+	left:0;
+	transform: translate(-30%,0);
+	background: url(../images/Векторний_смарт-об’єкт3.png);
+}
+.third- box p+p:after{
+	content: "";
+	width: 44px;
+	height: 43px;
+	position: absolute;
+	bottom:0;
+	left:50;
+	transform: translate(-50%,0);
+	background: url(../images/Векторний_смарт-об’єкт2.png) 
+}
+h2{
+	font-family: flow;
+	font-size: 40px;
+    font-weight: 700;
+    line-height: 80px;
+	width: 400px;
+	margin: 20px auto;
+	color: #65baaf;
+	position: relative;
+}
+.fourth-box h2::before{
+	content: "";
+	width: 84px;
+	height: 43px;
+	background: url(../images/Векторний_смарт-об’єкт2.png) no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%,-100%);
+}
+.fourth-box{
+	font-size: 20px;
+    font-weight: 400;
+}
+.fourth-box>div{
+	width: 744px;
+	height: 427px;
+	background: url(../images/книга.png);
+	margin: 20px 30px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	text-align: center;
+
+}
+.fourth-box>div+div{
+	width: 202px;
+	height: 197px;
+	margin: 20px 30px;
+	background: none;
+	position: relative;
+}
+.fourth-box h3{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #65baaf;
+    font-family: pf_din_text_comp_pro;
+    margin-top:40px;
+}
+.fourth-box>div+div::before{
+	content: "";
+	width: 114px;
+	height: 105px;
+	background: url(../images/новинка.png);
+	position: absolute;
+	bottom:90%;
+	left: 30%;
+}
+.fourth-box>div+div::after{
+	content: "";
+	width: 59px;
+	height: 32px;
+	background: url(../images/звезда.png);
+	position: absolute;
+	bottom:140%;
+	left: 65%;
+}
+.fourth-box div+div a{
+	width: 17px;
+	height: 13px;
+	display: inline-block;
+	background: url(../images/css_sprites.png) -338px -203px;
+	position: absolute;
+	left: -7%;
+	top:70%;
+}
+.fourth-box div+div a+a{
+	width: 17px;
+	height: 13px;
+	background: url(../images/css_sprites.png) -338px -236px;
+	position: absolute;
+	left: 100%;
+	top:70%;
+}
+.book div{
+	display: inline-block;
+	box-sizing: content-box;
+	vertical-align: middle;
+	width: 277px;
+	height: 411px;
+	font-family: pf_din_text_comp_pro;
+}
+.book h3{
+	margin: 50px 0 65px 35px;
+	color: #caa977;
+    font-size: 36px;
+    font-weight: 500;
+	position: relative;
+}
+.book h3::before{
+	content: '';
+	position: absolute;
+	top:80%;
+	left: 50%;
+	
+}
+.book a{
+	display: block;
+	color: #8f5926;
+    font-size: 18px;
+    font-weight: 600;
+}
+.book p{
+	color: #7d7d7d;
+    font-size: 20px;
+    font-weight: 400;
+	width: 214px;
+	margin: 0 0 20px 60px;
+	line-height: 25px;
+	font-family: prothin;
+}
+.book img{
+	margin: 65px 0 30px 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
